@@ -39,6 +39,17 @@
     </ul>
   </div>
 </nav>
+    <div class="container">
+      <div class="jumbotron jumbotron-custom">
+        <p id="quotes">
+          
+        </p>
+      
+      
+      
+      
+      
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -46,5 +57,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+  <script>
+    (function() {
+  "use strict";
+
+  var el = document.getElementById("quotes");
+
+  var quotes = [
+    ["Stay Hungry. Stay Foolish.", "Steve Jobs"],
+    ["Good Artists Copy, Great Artists Steal.", "Pablo Picasso"],
+    ["Argue with idiots, and you become an idiot.", "Paul Graham"],
+    ["Be yourself; everyone else is already taken.", "Oscar Wilde"],
+    ["Simplicity is the ultimate sophistication.", "Leonardo Da Vinci"]
+  ];
+
+  function rand(xs) {
+    return xs.slice(0).sort(function(){
+      return .5 - Math.random();
+    });
+  }
+
+  function quote(q) {
+    return "<p>&ldquo;"+ q[0] +"&rdquo; &mdash; <em>"+ q[1] +"</em></p>";
+  }
+
+  el.innerHTML = rand(quotes).map(quote).join('');
+
+}());
+  </script>
 </html>
 
