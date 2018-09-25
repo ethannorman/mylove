@@ -1,2 +1,2 @@
-# mylovecynthia
-To my beloved Cynthia.
+# mylove
+To my beloved.
